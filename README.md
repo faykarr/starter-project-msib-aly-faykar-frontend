@@ -9,6 +9,6 @@ This is just a simple sign in and sign up page for UPTKOMP. This project is made
 This project is not responsive for now. It's just a simple sign in and sign up page & profile page. It's not recommended to open this project on mobile devices.
 
 ## Some Screenshots
-![Sign In](src\assets\img\login.jpeg)
-![Sign Up](src\assets\img\register.jpeg)
-![Profile](src\assets\img\profile.jpeg)
+![Sign In](./src/assets/img/login.jpeg)
+![Sign Up](./src/assets/img/register.jpeg)
+![Profile](./src/assets/img/profile.jpeg)
