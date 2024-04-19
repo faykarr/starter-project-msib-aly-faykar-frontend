@@ -59,8 +59,7 @@ function Content() {
           </p>
           <input
             type="text"
-            className="pl-5 pr-3 py-2 bg-primarySurface border border-primaryBorder rounded-md focus:outline-none focus:border-secondaryMain transition-all w-full text-textSecondary"
-            value="Nasyath Faykar"
+            className="pl-5 pr-3 py-2 bg-primarySurface border border-primaryBorder rounded-md focus:outline-none focus:border-secondaryMain transition-all w-full text-textSecondary" placeholder="Nasyath Faykar"
           />
         </div>
         <div className="flex flex-col items-start justify-center gap-2 mt-5">
@@ -77,7 +76,7 @@ function Content() {
           <input
             type="text"
             className="pl-5 pr-3 py-2 bg-primarySurface border border-primaryBorder rounded-md focus:outline-none focus:border-secondaryMain transition-all w-full text-textSecondary"
-            value="teknisi.faykarr@stmik-wp.ac.id"
+            placeholder="teknisi.faykarr@stmik-wp.ac.id"
           />
         </div>
         <button className="flex flex-row gap-3 justify-around items-center px-12 py-2 bg-secondaryMain text-white rounded-lg font-medium text-lg mt-5">
