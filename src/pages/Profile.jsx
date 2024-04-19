@@ -3,7 +3,7 @@ function Navbar() {
     <div className="flex justify-around items-center w-full py-6">
       <div className="w-full pl-10">
         <img
-          src="/src/assets/icons/menu.svg"
+          src="./src/assets/icons/menu.svg"
           alt="Menu Icons"
           className="cursor-pointer"
         />
@@ -14,7 +14,7 @@ function Navbar() {
           <p className="font-light">Administrator</p>
         </div>
         <img
-          src="/src/assets/img/avatar.jpg"
+          src="./src/assets/img/avatar.jpg"
           alt="Avatar"
           className="rounded-full w-16 h-16 cursor-pointer"
         />
@@ -28,7 +28,7 @@ function Content() {
     <div className="grid grid-cols-3 justify-center items-center px-20 py-7 text-white gap-11">
       <div className="w-full flex flex-col items-center justify-around py-10 rounded-md bg-primaryMain border-[3px] border-primaryBorder shadow-card h-full">
         <img
-          src="/src/assets/img/avatar.jpg"
+          src="./src/assets/img/avatar.jpg"
           alt="Avatar"
           className="rounded-full w-48"
         />
@@ -37,7 +37,7 @@ function Content() {
           <p className="font-normal text-base">Senior Asisten UPTKOMP</p>
         </div>
         <button className="flex flex-row gap-3 justify-around items-center px-12 py-2 bg-secondaryMain text-white rounded-lg font-medium text-lg">
-          <img src="/src/assets/icons/gallery-export.svg" alt="Gallery Icon" />
+          <img src="./src/assets/icons/gallery-export.svg" alt="Gallery Icon" />
           <p className="text-white font-medium text-base">Change Avatar</p>
         </button>
       </div>

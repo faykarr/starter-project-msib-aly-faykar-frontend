@@ -24,7 +24,7 @@ function Login() {
       <div className="flex flex-col md:items-center lg:items-start md:justify-center lg:justify-start h-full md:pl-0 lg:pl-[102px] md:pt-0 lg:pt-20 ">
         <div className="flex justify-between mb-14 items-center gap-3">
           <img
-            src="/src/assets/icons/logo-upt.png"
+            src="./src/assets/icons/logo-upt.png"
             alt="Logo UPT"
             className="w-[79px] h-[76px]"
           />
@@ -47,7 +47,7 @@ function Login() {
             type="text"
             name="username"
             placeholder="Username"
-            iconPath="/src/assets/icons/user.svg"
+            iconPath="./src/assets/icons/user.svg"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           ></InputField>
@@ -55,7 +55,7 @@ function Login() {
             type="password"
             name="password"
             placeholder="Password"
-            iconPath="/src/assets/icons/security-user.svg"
+            iconPath="./src/assets/icons/security-user.svg"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></InputField>
