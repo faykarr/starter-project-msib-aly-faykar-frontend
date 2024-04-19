@@ -13,7 +13,7 @@ function Login() {
     console.log("Password:", password);
     // Perform validation
     if (username === "faykarr" && password === "faykar30") {
-      navigate("/register");
+      navigate("/profile");
     } else {
       alert("Invalid username or password");
     }
@@ -60,7 +60,7 @@ function Login() {
         ></InputField>
       </div>
       <div className="flex flex-col items-start justify-between gap-8">
-        <Buttons placeholder="Login" onClick={handleLogin}></Buttons>
+        <Buttons placeholder="Sign In" onClick={handleLogin}></Buttons>
         <p className="text-textSecondary">
           Don&apos;t have an account?{" "}
           <Link to="/register" className="text-secondaryHover font-bold">

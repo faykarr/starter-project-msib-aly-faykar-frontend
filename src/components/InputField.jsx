@@ -25,8 +25,8 @@ InputField.propTypes = {
   name: PropTypes.string.isRequired,
   iconPath: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
 };
 
 export default InputField;
