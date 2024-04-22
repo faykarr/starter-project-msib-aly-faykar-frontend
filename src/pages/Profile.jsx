@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
     <div className="flex justify-around items-center w-full py-6">
@@ -36,7 +38,7 @@ function Content() {
           <h3 className="font-medium text-xl">Nasyath Faykar</h3>
           <p className="font-normal text-base">Senior Asisten UPTKOMP</p>
         </div>
-        <button className="flex flex-row gap-3 justify-around items-center px-12 py-2 bg-secondaryMain text-white rounded-lg font-medium text-lg">
+        <button className="flex flex-row gap-3 justify-around items-center px-12 py-2 bg-secondaryMain text-white rounded-lg font-medium text-lg hover:bg-secondaryHover transition-all">
           <img src="./src/assets/icons/gallery-export.svg" alt="Gallery Icon" />
           <p className="text-white font-medium text-base">Change Avatar</p>
         </button>
@@ -59,7 +61,8 @@ function Content() {
           </p>
           <input
             type="text"
-            className="pl-5 pr-3 py-2 bg-primarySurface border border-primaryBorder rounded-md focus:outline-none focus:border-secondaryMain transition-all w-full text-textSecondary" placeholder="Nasyath Faykar"
+            className="text-textSecondary w-full pl-5 pr-3 py-2 bg-primarySurface border border-primaryBorder focus:outline-none focus:border-none focus:ring focus:ring-secondaryHover rounded-md transition-all ease-in-out"
+            placeholder="Nasyath Faykar"
           />
         </div>
         <div className="flex flex-col items-start justify-center gap-2 mt-5">
@@ -75,13 +78,18 @@ function Content() {
           <p className="text-base text-textSecondary font-normal">Email</p>
           <input
             type="text"
-            className="pl-5 pr-3 py-2 bg-primarySurface border border-primaryBorder rounded-md focus:outline-none focus:border-secondaryMain transition-all w-full text-textSecondary"
+            className="text-textSecondary w-full pl-5 pr-3 py-2 bg-primarySurface border border-primaryBorder focus:outline-none focus:border-none focus:ring focus:ring-secondaryHover rounded-md transition-all ease-in-out"
             placeholder="teknisi.faykarr@stmik-wp.ac.id"
           />
         </div>
-        <button className="flex flex-row gap-3 justify-around items-center px-12 py-2 bg-secondaryMain text-white rounded-lg font-medium text-lg mt-5">
-          <p className="text-white font-medium text-base">Save Changes</p>
-        </button>
+        <div className="flex flex-row justify-between items-center">
+          <button className="flex flex-row gap-3 justify-around items-center px-12 py-2 bg-secondaryMain text-white rounded-lg font-medium text-lg mt-5 hover:bg-secondaryHover transition-all">
+            <p className="text-white font-medium text-base">Save Changes</p>
+          </button>
+          <Link to={"/login"} className="flex flex-row gap-3 justify-around items-center px-12 py-2 bg-red-400 text-white rounded-lg font-medium text-lg mt-5 hover:bg-red-500 transition-all">
+            <p className="text-white font-medium text-base">Logout</p>
+          </Link>
+        </div>
       </div>
     </div>
   );

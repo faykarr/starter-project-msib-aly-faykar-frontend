@@ -1,15 +1,16 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-function InputField({ type, name, iconPath, placeholder, value, onChange}) {
+function InputField({ type, name, iconPath, placeholder, value, onChange }) {
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <input
         type={type}
         name={name}
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="pl-10 pr-3 py-2 bg-primarySurface border border-primaryBorder rounded-md focus:outline-none focus:border-secondaryMain transition-all w-96 text-white" required
+        className="w-full text-textSecondary pl-10 pr-3 py-2 tex bg-primarySurface border border-primaryBorder focus:outline-none focus:border-none focus:ring focus:ring-secondaryHover rounded-md transition-all ease-in-out"
+        required
       />
       <img
         src={iconPath}
