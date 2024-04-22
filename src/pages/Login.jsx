@@ -2,6 +2,9 @@ import InputField from "../components/InputField";
 import Buttons from "../components/Buttons";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import logoUPT from "../assets/icons/logo-upt.png";
+import iconUser from "../assets/icons/user.svg";
+import iconPassword from "../assets/icons/security-user.svg";
 
 function Login() {
   const navigate = useNavigate();
@@ -24,7 +27,7 @@ function Login() {
       <div className="flex flex-col justify-center items-center lg:justify-start lg:items-start h-full md:pl-0 lg:pl-[102px] md:pt-0 lg:pt-20">
         <div className="w-2/3 flex justify-start mb-14 items-center gap-3">
           <img
-            src="./src/assets/icons/logo-upt.png"
+            src={logoUPT}
             alt="Logo UPT"
             className="w-[79px] h-[76px]"
           />
@@ -47,7 +50,7 @@ function Login() {
             type="text"
             name="username"
             placeholder="Username"
-            iconPath="./src/assets/icons/user.svg"
+            iconPath={iconUser}
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           ></InputField>
@@ -55,7 +58,7 @@ function Login() {
             type="password"
             name="password"
             placeholder="Password"
-            iconPath="./src/assets/icons/security-user.svg"
+            iconPath={iconPassword}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></InputField>

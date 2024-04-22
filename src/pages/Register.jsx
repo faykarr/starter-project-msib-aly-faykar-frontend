@@ -1,6 +1,11 @@
 import InputField from "../components/InputField";
 import Buttons from "../components/Buttons";
 import { Link, useNavigate } from "react-router-dom";
+import logoUPT from "../assets/icons/logo-upt.png";
+import iconUser from "../assets/icons/user.svg";
+import iconPassword from "../assets/icons/security-user.svg";
+import iconNIM from "../assets/icons/lock.svg";
+import iconNama from "../assets/icons/user-octagon.svg";
 
 function Register() {
   const navigate = useNavigate();
@@ -14,7 +19,7 @@ function Register() {
       <div className="flex flex-col justify-center items-center lg:items-start lg:justify-start h-full pl-0 lg:pl-[102px] pt-0 lg:py-14">
         <div className="w-2/3 flex justify-start mb-8 items-center gap-3 ">
           <img
-            src="./src/assets/icons/logo-upt.png"
+            src={logoUPT}
             alt="Logo UPT"
             className="w-[79px] h-[76px]"
           />
@@ -37,25 +42,25 @@ function Register() {
             type="text"
             name="nim"
             placeholder="Nomor Induk Mahasiswa"
-            iconPath="./src/assets/icons/lock.svg"
+            iconPath={iconNIM}
           ></InputField>
           <InputField
             type="text"
-            name="username"
+            name="nama"
             placeholder="Nama Lengkap"
-            iconPath="./src/assets/icons/user-octagon.svg"
+            iconPath={iconNama}
           ></InputField>
           <InputField
             type="text"
             name="username"
             placeholder="Username"
-            iconPath="./src/assets/icons/user.svg"
+            iconPath={iconUser}
           ></InputField>
           <InputField
             type="password"
             name="password"
             placeholder="Password"
-            iconPath="./src/assets/icons/security-user.svg"
+            iconPath={iconPassword}
           ></InputField>
         </div>
         <div className="w-2/3 flex flex-col items-start justify-between gap-8">
