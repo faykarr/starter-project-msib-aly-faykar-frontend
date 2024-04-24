@@ -1,8 +1,8 @@
 import InputField from "../components/InputField";
 import Buttons from "../components/Buttons";
+import Logo from "../components/Logo";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import logoUPT from "../assets/icons/logo-upt.png";
 import iconUser from "../assets/icons/user.svg";
 import iconPassword from "../assets/icons/security-user.svg";
 
@@ -23,21 +23,12 @@ function Login() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 h-[100vh] overflow-x-hidden">
       <div className="flex flex-col justify-center items-center h-full md:pl-0 lg:px-[38px] md:pt-0 lg:py-14">
-        <div className="w-2/3 flex justify-start mb-14 items-center gap-3">
-          <img
-            src={logoUPT}
-            alt="Logo UPT"
-            className="w-[60px] h-[57px] lg:w-[79px] lg:h-[76px]"
-          />
-          <h1 className="font-poppins font-extrabold text-white text-3xl lg:text-4xl">
-            <span className="text-secondaryHover">UPT</span>KOMP
-          </h1>
-        </div>
+        <Logo></Logo>
         <div className="w-2/3 flex flex-col items-start justify-between gap-7">
           <h2 className="font-poppins font-extrabold text-3xl lg:text-4xl text-white">
             Sign In.
           </h2>
-          <p className="text-textSecondary w-full">
+          <p className="text-textSecondary">
             Sign in with your data that you entered during registration at{" "}
             <span className="text-secondaryHover font-bold">UPT</span>
             <span className="text-white font-bold">KOMP</span>

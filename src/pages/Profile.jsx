@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import iconMenu from "../assets/icons/menu.svg";
 import iconGallery from "../assets/icons/gallery-export.svg";
 import iconAvatar from "../assets/img/avatar.jpg";
+import { useState } from "react";
 
 function Navbar() {
   return (
@@ -15,13 +16,13 @@ function Navbar() {
       </div>
       <div className="flex flex-row gap-8 text-textSecondary pr-20">
         <div className="flex flex-col justify-center items-start">
-          <h1 className="font-poppins font-medium text-xl">Faykarr</h1>
-          <p className="font-light">Administrator</p>
+          <h1 className="font-poppins font-medium text-lg lg:text-xl">Faykarr</h1>
+          <p className="font-light text-sm lg:text-base">Administrator</p>
         </div>
         <img
           src={iconAvatar}
           alt="Avatar"
-          className="rounded-full w-16 h-16 cursor-pointer"
+          className="rounded-full w-14 h-14 lg:w-16 lg:h-16 cursor-pointer"
         />
       </div>
     </div>
@@ -29,24 +30,27 @@ function Navbar() {
 }
 
 function Content() {
+  const [nama, setNama] = useState("Nasyath Faykar");
+  const [email, setEmail] = useState("teknisi.faykarr.stmik-wp.ac.id");
+
   return (
-    <div className="grid grid-cols-3 justify-center items-center px-20 py-7 text-white gap-11">
-      <div className="w-full flex flex-col items-center justify-around py-10 rounded-md bg-primaryMain border-[3px] border-primaryBorder shadow-card h-full">
+    <div className="grid grid-cols-1 lg:grid-cols-3 justify-center items-center px-9 lg:px-20 py-7 text-white gap-11">
+      <div className="w-full flex flex-col items-center justify-around py-10 rounded-md bg-primaryMain border-[3px] border-primaryBorder shadow-card h-full gap-4">
         <img
           src={iconAvatar}
           alt="Avatar"
-          className="rounded-full w-48"
+          className="rounded-full w-32  lg:w-48"
         />
         <div className="flex flex-col justify-center items-center text-textSecondary">
-          <h3 className="font-medium text-xl">Nasyath Faykar</h3>
-          <p className="font-normal text-base">Senior Asisten UPTKOMP</p>
+          <h3 className="font-medium text-lg lg:text-xl">Nasyath Faykar</h3>
+          <p className="font-normal text-sm lg:text-base">Senior Asisten UPTKOMP</p>
         </div>
-        <button className="flex flex-row gap-3 justify-around items-center px-12 py-2 bg-secondaryMain text-white rounded-lg font-medium text-lg hover:bg-secondaryHover transition-all">
+        <button className="flex flex-row gap-3 justify-around items-center px-6 lg:px-8 py-2 bg-secondaryMain text-white rounded-lg font-medium text-lg hover:bg-secondaryHover transition-all">
           <img src={iconGallery} alt="Gallery Icon" />
-          <p className="text-white font-medium text-base">Change Avatar</p>
+          <p className="text-white font-medium text-sm lg:text-base">Change Avatar</p>
         </button>
       </div>
-      <div className="col-span-2 bg-primaryMain border-[3px] border-primaryBorder h-full rounded-md shadow-card px-7 py-5">
+      <div className="col-span-1 lg:col-span-2 bg-primaryMain border-[3px] border-primaryBorder h-full rounded-md shadow-card px-7 py-5">
         <div className="flex flex-col items-start justify-center gap-2">
           <p className="text-base text-textSecondary font-normal">
             Nomor Induk Mahasiswa
@@ -55,7 +59,7 @@ function Content() {
             type="text"
             className="pl-5 pr-3 py-2 bg-primaryBorder border border-primaryBorder rounded-md focus:outline-none focus:border-secondaryMain transition-all w-full text-textSecondary"
             value="21.230.0194"
-            disabled="true"
+            disabled={true}
           />
         </div>
         <div className="flex flex-col items-start justify-center gap-2 mt-5">
@@ -64,8 +68,7 @@ function Content() {
           </p>
           <input
             type="text"
-            className="text-textSecondary w-full pl-5 pr-3 py-2 bg-primarySurface border border-primaryBorder focus:outline-none focus:border-none focus:ring focus:ring-secondaryHover rounded-md transition-all ease-in-out"
-            placeholder="Nasyath Faykar"
+            className="text-textSecondary w-full pl-5 pr-3 py-2 bg-primarySurface border border-primaryBorder focus:outline-none focus:border-none focus:ring focus:ring-secondaryHover rounded-md transition-all ease-in-out" value={nama} onChange={(e) => setNama(e.target.value)}
           />
         </div>
         <div className="flex flex-col items-start justify-center gap-2 mt-5">
@@ -74,7 +77,7 @@ function Content() {
             type="text"
             className="pl-5 pr-3 py-2 bg-primaryBorder border border-primaryBorder rounded-md focus:outline-none focus:border-secondaryMain transition-all w-full text-textSecondary"
             value="faykarr"
-            disabled="true"
+            disabled={true}
           />
         </div>
         <div className="flex flex-col items-start justify-center gap-2 mt-5">
@@ -82,14 +85,14 @@ function Content() {
           <input
             type="text"
             className="text-textSecondary w-full pl-5 pr-3 py-2 bg-primarySurface border border-primaryBorder focus:outline-none focus:border-none focus:ring focus:ring-secondaryHover rounded-md transition-all ease-in-out"
-            placeholder="teknisi.faykarr@stmik-wp.ac.id"
+            value={email} onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div className="flex flex-row justify-between items-center">
-          <button className="flex flex-row gap-3 justify-around items-center px-12 py-2 bg-secondaryMain text-white rounded-lg font-medium text-lg mt-5 hover:bg-secondaryHover transition-all">
+        <div className="flex flex-col sm:flex-row justify-between items-start lg:items-center mt-2">
+          <button className="flex flex-row gap-3 justify-around items-center px-4 lg:px-9 py-2 bg-secondaryMain text-white rounded-lg font-medium text-lg mt-5 hover:bg-secondaryHover transition-all">
             <p className="text-white font-medium text-base">Save Changes</p>
           </button>
-          <Link to={"/login"} className="flex flex-row gap-3 justify-around items-center px-12 py-2 bg-red-400 text-white rounded-lg font-medium text-lg mt-5 hover:bg-red-500 transition-all">
+          <Link to={"/login"} className="flex flex-row gap-3 justify-around items-center px-11 md:px-9 py-2 bg-red-400 text-white rounded-lg font-medium text-lg mt-5 hover:bg-red-500 transition-all">
             <p className="text-white font-medium text-base">Logout</p>
           </Link>
         </div>
@@ -114,9 +117,9 @@ function Profile() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col justify-center items-start text-textSecondary pl-20 gap-3">
-        <h2 className="text-2xl font-semibold">Account Profile</h2>
-        <p className="text-base font-medium">
+      <div className="flex flex-col justify-center items-start text-textSecondary pl-10 lg:pl-20 gap-3">
+        <h2 className="text-xl lg:text-2xl font-semibold">Account Profile</h2>
+        <p className="text-sm lg:text-base font-medium w-3/4">
           A page where users can see & change their profile information.
         </p>
       </div>

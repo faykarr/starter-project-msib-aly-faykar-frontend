@@ -1,7 +1,7 @@
 import InputField from "../components/InputField";
 import Buttons from "../components/Buttons";
+import Logo from "../components/Logo";
 import { Link, useNavigate } from "react-router-dom";
-import logoUPT from "../assets/icons/logo-upt.png";
 import iconUser from "../assets/icons/user.svg";
 import iconPassword from "../assets/icons/security-user.svg";
 import iconNIM from "../assets/icons/lock.svg";
@@ -17,16 +17,7 @@ function Register() {
   return (
     <div className="grid lg:grid-cols-2 h-[100vh] overflow-x-hidden md:grid-cols-1">
       <div className="flex flex-col justify-center items-center h-full pl-0 lg:px-[38px] pt-0 lg:py-14">
-        <div className="w-2/3 flex justify-start mb-8 items-center gap-3 ">
-          <img
-            src={logoUPT}
-            alt="Logo UPT"
-            className="w-[60px] h-[57px] lg:w-[79px] lg:h-[76px]"
-          />
-          <h1 className="font-poppins font-extrabold text-white text-3xl lg:text-4xl">
-            <span className="text-secondaryHover">UPT</span>KOMP
-          </h1>
-        </div>
+        <Logo></Logo>
         <div className="w-2/3 flex flex-col items-start justify-between gap-7 ">
           <h2 className="font-poppins font-extrabold text-3xl lg:text-4xl text-white">
             Sign Up.
