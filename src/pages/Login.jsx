@@ -12,8 +12,6 @@ function Login() {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    console.log("Username:", username);
-    console.log("Password:", password);
     // Perform validation
     if (username === "faykarr" && password === "faykar30") {
       navigate("/profile");
@@ -24,19 +22,19 @@ function Login() {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 h-[100vh] overflow-x-hidden">
-      <div className="flex flex-col justify-center items-center lg:justify-start lg:items-start h-full md:pl-0 lg:pl-[102px] md:pt-0 lg:pt-20">
+      <div className="flex flex-col justify-center items-center h-full md:pl-0 lg:px-[38px] md:pt-0 lg:py-14">
         <div className="w-2/3 flex justify-start mb-14 items-center gap-3">
           <img
             src={logoUPT}
             alt="Logo UPT"
-            className="w-[79px] h-[76px]"
+            className="w-[60px] h-[57px] lg:w-[79px] lg:h-[76px]"
           />
-          <h1 className="font-poppins font-extrabold text-white text-4xl">
+          <h1 className="font-poppins font-extrabold text-white text-3xl lg:text-4xl">
             <span className="text-secondaryHover">UPT</span>KOMP
           </h1>
         </div>
         <div className="w-2/3 flex flex-col items-start justify-between gap-7">
-          <h2 className="font-poppins font-extrabold text-4xl text-white">
+          <h2 className="font-poppins font-extrabold text-3xl lg:text-4xl text-white">
             Sign In.
           </h2>
           <p className="text-textSecondary w-full">
